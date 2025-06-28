@@ -59,9 +59,8 @@ function LoginModal({ onClose }) {
       try {
         const res = await fetch(`${API_BASE_URL}/api/auth/login`, {
           method: "POST",
-          headers: { "Content-Type": "application/json",'Access-Control-Allow-Origin':'*' },
+          headers: { "Content-Type": "application/json",'Access-Control-Allow-Origin':'https://manui.vercel.app/' },
           body: JSON.stringify({ email, password }),
-          referrerPolicy: 'no-referrer' 
         });
 
         const data = await res.json();
