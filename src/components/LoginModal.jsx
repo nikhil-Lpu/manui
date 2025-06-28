@@ -59,7 +59,7 @@ function LoginModal({ onClose }) {
       try {
         const res = await fetch(`${API_BASE_URL}/api/auth/login`, {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: { "Content-Type": "application/json",'Access-Control-Allow-Origin':'*' },
           body: JSON.stringify({ email, password }),
         });
 
