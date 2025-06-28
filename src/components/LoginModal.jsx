@@ -61,6 +61,7 @@ function LoginModal({ onClose }) {
           method: "POST",
           headers: { "Content-Type": "application/json",'Access-Control-Allow-Origin':'*' },
           body: JSON.stringify({ email, password }),
+          referrerPolicy: 'no-referrer' 
         });
 
         const data = await res.json();
