@@ -7,7 +7,7 @@ function ProductGrid() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch("https://manu-green.vercel.app//api/products");
+        const res = await fetch("https://manu-kappa.vercel.app/api/products");
         const data = await res.json();
         setProducts(data);
         setLoading(false);
